@@ -56,6 +56,8 @@ module BestInPlace
         options[:data]['bip-extra-payload'] = Hash[real_object.changes.map { |k,v| [k, v[1]] }]
       end
 
+      options[:data]['bip-no-save'] = opts[:no_save].presence
+
       options[:data]['bip-confirm'] = opts[:confirm].presence
       options[:data]['bip-value'] = html_escape(value).presence
 
